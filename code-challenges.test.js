@@ -1,6 +1,6 @@
 // ASSESSMENT 6: JavaScript Coding Practical Questions with Jest
 
-const { describe } = require("yargs")
+// const { describe } = require("yargs")
 
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
@@ -84,7 +84,23 @@ const modulosThree = (array) => {
   return array.filter(value => typeof value === "number").map(value => value % 3)
 }
 
-
+/*
+Pseudocode (updated):
+Function Name: modulosThree
+Input: A mixed data array called array (can contain numbers, strings, booleans, etc.)
+Output: An array of numbers, each being the remainder when the original number in array is divided by 3.
+Start with a mixed data array called array.
+Apply the filter function to array:
+For each element value in the array:
+Check if the type of value is a number.
+If yes, keep it. If not, discard it.
+The filter function returns a new array containing only numbers.
+Apply the map function to the new array created from the filter step:
+For each number value in the new array:
+Calculate the remainder when value is divided by 3 (value % 3).
+The map function returns a new array with these remainders.
+Return the new array of remainders.
+*/
 
 // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
 
@@ -114,9 +130,24 @@ const cubeAndSum2 = [0, 5, 10]
 //use .reduce to add all the cubed numbers together
 //return the sum of all the cubed numbers
 
-const cubeAndSum = (array) => {
-  return array.map(value => Math.pow(value, 3)).reduce((acc, value) => acc + value)
-}
+const cubeAndSum = (array) => 
+  array.map(val => val ** 3).reduce((acc, val) => acc + val, 0)
 
 
+/*
+Pseudocode (updated):
+Function Name: cubeAndSum
+Input: array of numbers called 'array'
+Output: single number representing the sum of all the numbers in array cubed
+Start with an array of numbers called array.
+Apply the map function to array
+For each element val in the array Calculate val raised to the power of 3.
+The map function returns a new array where each element is cubed.
+Apply the reduce function to the new array created from step 2
+Initialize an accumulator acc with the value 0.
+For each element val in the new array
+Add val to the accumulator acc.
+The reduce function returns the final value of acc, which is the sum of all the cubed numbers.
+Return the sum (final value of acc).
+*/
 
